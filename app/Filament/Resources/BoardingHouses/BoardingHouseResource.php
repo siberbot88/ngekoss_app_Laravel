@@ -9,6 +9,7 @@ use App\Filament\Resources\BoardingHouses\Schemas\BoardingHouseForm;
 use App\Filament\Resources\BoardingHouses\Tables\BoardingHousesTable;
 use App\Models\BoardingHouse;
 use BackedEnum;
+use UnitEnum;
 use Filament\Resources\Resource;
 use Filament\Schemas\Schema;
 use Filament\Support\Icons\Heroicon;
@@ -18,7 +19,9 @@ class BoardingHouseResource extends Resource
 {
     protected static ?string $model = BoardingHouse::class;
 
-    protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedRectangleStack;
+    protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedHomeModern;
+
+    protected static string | UnitEnum | null $navigationGroup = 'Boarding House Management';
 
     public static function form(Schema $schema): Schema
     {
